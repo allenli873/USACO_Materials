@@ -1,0 +1,18 @@
+new intArray dist[n]
+fill(dist, INF)
+new PriorityQueue pq
+
+add first node into pq with dist 0
+
+while pq is not empty:
+	Node n = pq.poll
+	for every connected node to n:
+		new Node o with its number and distance from n
+		if dist[o.n] > dist[p.n] + o.dist:
+			dist[o.n] = dist[p.n] + o.dist
+			pq.add(new Node(o.n, dist[o.n])) 
+
+//dist[n] should be distance from root node to that node
+
+class Node:
+	int n, dist
