@@ -175,7 +175,7 @@ int queryUp(int node, int lca) {
             ans = max(ans, cost[node]);
             node = par[node][0];
         } else {
-            int next = -1;
+            int next;
             if (chainHead[lca] == chainHead[node])
                 next = lca;
             else
