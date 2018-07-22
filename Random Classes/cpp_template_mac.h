@@ -21,6 +21,7 @@ typedef vector<ll> vl;
 typedef vector<pi> vpi;
 
 template<class T> using min_heap = priority_queue<T, vector<T>, greater<T>>;
+
 template<class T> inline void MAX(T& a, T b) { if(a < b) a = b; }
 template<class T> inline void MIN(T& a, T b) { if(a > b) a = b; }
 template<class T> inline void MODA(T& a, T b) { a %= b; if(a < 0) a += b; }
