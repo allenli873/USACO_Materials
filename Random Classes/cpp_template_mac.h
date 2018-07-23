@@ -46,7 +46,8 @@ template<class T> inline void MODA(T& a, T b) { a %= b; if(a < 0) a += b; }
 \#define ub upper_bound
 
 const int MOD = 1000000007;
-const int INF = 1061109567;
+const int INF = 0x3f3f3f3f;
+const int NINF = -0x3f3f3f40;
 
 int main() {
     FAST_IO;
