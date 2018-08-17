@@ -10,10 +10,10 @@ Currently contains:
 * Heavy-Light Decomposition
 * SegTree with Lazy Propogation
 * Z Algorithm
-
+* Mo's Algorithm/Hilbert Mo's Algorithm
+* Binary Indexed Tree
 Todo:
 
-* Fenwick Tree
 * Aho-Corasick
 * Convex Hull
 * Radix Sort
