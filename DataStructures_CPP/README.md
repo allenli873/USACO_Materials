@@ -12,6 +12,7 @@ Currently contains:
 * Z Algorithm
 * Mo's Algorithm/Hilbert Mo's Algorithm
 * Binary Indexed Tree
+
 Todo:
 
 * Aho-Corasick
