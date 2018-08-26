@@ -12,10 +12,10 @@ Currently contains:
 * Z Algorithm
 * Mo's Algorithm/Hilbert Mo's Algorithm
 * Binary Indexed Tree
+* Suffix Array/LCP
 
 Todo:
 
 * Aho-Corasick
 * Convex Hull
-* Radix Sort
-* Suffix Array/LCP
+* Radix Sort (For NlogN SA)
