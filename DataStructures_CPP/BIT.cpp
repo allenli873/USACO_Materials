@@ -1,12 +1,8 @@
-template<class Type>
+template<class Type, int SZ>
 class BIT {
 public:
-    Type* fen;
+    Type fen[SZ * 2];
     int n;
-    BIT(int num) {
-        n = num;
-        fen = new Type[num * 2];
-    }
 
     Type query(int idx) {
         Type ret = 0;
