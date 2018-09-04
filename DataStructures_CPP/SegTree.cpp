@@ -1,34 +1,34 @@
+template<class T>
 class SegTree {
 public:
-    int len;
-    vi seg, arr;
+    int SZ;
+    vector<T> seg;
 
-    SegTree(int l) {
-        len = l;
-        seg.resize(l * 4);
+    SegTree(int sz) {
+        SZ = sz;
+        seg.resize(SZ * 4);
     }
 
-    SegTree(vi a) {
-        len = a.size();
-        seg.resize(len * 4);
-        arr = a;
-        build(1, 0, len - 1);
+    SegTree(int sz, T arr[]) {
+        SZ = sz;
+        seg.resize(SZ * 4);
+        build(1, 0, SZ - 1, arr);
     }
 
-    int query(int a, int b) {
-        return query(a, b, 1, 0, len - 1);
+    T query(int a, int b) {
+        return query(a, b, 1, 0, SZ - 1);
     }
 
-    void update(int idx, int diff) {
-        update(1, 0, len - 1, idx, diff);
+    void update(int idx, T newVal) {
+        update(1, 0, SZ - 1, idx, newVal);
     }
 
 private:
-    int f(int a, int b) { //change for different problems
+    T f(T a, T b) { //change for different problems
         return a + b;
     }
 
-    void build(int node, int l, int r) {
+    void build(int node, int l, int r, T arr[]) {
         if (l > r)
             return;
         if (l == r) {
@@ -36,14 +36,14 @@ private:
             return;
         }
         int mid = (l + r) / 2;
-        build(node * 2, l, mid);
-        build(node * 2 + 1, mid + 1, r);
+        build(node * 2, l, mid, arr);
+        build(node * 2 + 1, mid + 1, r, arr);
         seg[node] = f(seg[node * 2], seg[node * 2 + 1]);
     }
 
-    int query(int a, int b, int node, int l, int r) {
+    T query(int a, int b, int node, int l, int r) {
         if (l > b || r < a) {
-            return -1;
+            return NINF;
         }
         if (l >= a && r <= b) {
             return seg[node];
@@ -51,23 +51,23 @@ private:
         int mid = (l + r) / 2;
         int n1 = query(a, b, node * 2, l, mid);
         int n2 = query(a, b, node * 2 + 1, mid + 1, r);
-        if (n1 == -1)
+        if (n1 == NINF)
             return n2;
-        if (n2 == -1)
+        if (n2 == NINF)
             return n1;
         return f(n1, n2);
     }
 
-    void update(int node, int l, int r, int idx, int diff) {
+    void update(int node, int l, int r, int idx, T newVal) {
         if (idx < l || idx > r)
             return;
         if(l == r) {
-            seg[node] += diff;
+            seg[node] = newVal;
             return;
         }
         int mid = (l + r) / 2;
-        update(node * 2, l, mid, idx, diff);
-        update(node * 2 + 1, mid + 1, r, idx, diff);
+        update(node * 2, l, mid, idx, newVal);
+        update(node * 2 + 1, mid + 1, r, idx, newVal);
         seg[node] = f(seg[node*2], seg[node*2+1]);
     }
 };
