@@ -10,7 +10,7 @@ struct SegTree {
         SZ = sz;
         seg.resize(SZ*2);
     }
-    SegTree(int sz, int arr[]) {
+    SegTree(int sz, T arr[]) {
         SZ = sz;
         seg.resize(SZ*2);
         for(int i = 0; i < SZ; i++) seg[SZ+i] = arr[i];
