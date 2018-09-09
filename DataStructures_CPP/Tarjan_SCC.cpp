@@ -13,7 +13,6 @@ void SCCUtil(int curr, int disc[], int low[], stack<int>* st, bool inStack[]) {
         } else if(inStack[node])
             MIN(low[curr], disc[node]);
     }
-    vector<vector<int>> res;
     int tmp;
     if(low[curr] == disc[curr]) { //head
         vector<int> vec;
@@ -36,7 +35,6 @@ void SCC() {
     memset(disc, 0, sizeof disc);
     memset(low, 0, sizeof low);
     memset(inStack, false, sizeof inStack);
-    vector<vector<int>> res;
     F0R(i, V)
         if(!disc[i]) {
             SCCUtil(i, disc, low, st, inStack);
