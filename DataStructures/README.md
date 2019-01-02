@@ -1,15 +1,21 @@
 # Data Structures
 
-(This library is no longer being updated, check the C++ one instead)
-
 Currently contains:
 
-* Segment Trees (Lazy Propogation for range updates, queries O(log n), updates O(log n)
-   * Minimum Segment Tree
-   * Range Sum Segment Tree
+* DSU/Union Find
+* SegTree w/out Lazy Propagation
+* Range Tree
+* LCA with binary lifting
+* 2D Range Tree
+* Heavy-Light Decomposition
+* SegTree with Lazy Propogation
+* Z Algorithm
+* Mo's Algorithm/Hilbert Mo's Algorithm
+* Binary Indexed Tree
+* Suffix Array/LCP
 
-* Union Find (Contains Path Compression + Union by Rank heuristics, Union O(αn), Find O(αn), amortized O(1)
+Todo:
 
-* Binary Indexed Tree/Fenwick Tree (can go positive or negative), queries O(log n), updates O(log n), range updates O(n). Use BIT if you can because its slightly faster than segtree.
-
-* Sparse Table (one indexed).
+* Aho-Corasick
+* Convex Hull
+* Radix Sort (For NlogN SA)
