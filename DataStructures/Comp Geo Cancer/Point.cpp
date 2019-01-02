@@ -7,4 +7,4 @@ struct point {
 			return x < o.x;
 		return y < o.y;
 	}
-};//
+};
