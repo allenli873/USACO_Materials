@@ -2,7 +2,7 @@ template<class Type, int SZ>
 class BIT {
 public:
     Type fen[SZ * 2];
-    int n;
+    int n = SZ;
 
     Type query(int idx) {
         Type ret = 0;
