@@ -53,7 +53,7 @@ template <typename T, typename U> ostream& operator<<(ostream& os, const pair<T,
 #define lb lower_bound
 #define ub upper_bound
 
-const int EPS = 1e-9;
+const double EPS = 1e-9;
 const int MOD = 1000000007;
 const int INF = 0x3f3f3f3f;
 const int NINF = -0x3f3f3f40;
@@ -63,7 +63,7 @@ const ll NINF_L = -0x3f3f3f3f3f3f3f40;
 const int MAXN = 55;
 
 int main() {
-    FAST_IO;
+	FAST_IO;
 
 }
 
