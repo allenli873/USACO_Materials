@@ -20,12 +20,6 @@ inline void MAX(T &a, U b) { if (a < b) a = b; }
 template<class T, class U>
 inline void MIN(T &a, U b) { if (a > b) a = b; }
 
-template<class T, class U>
-inline void MODA(T &a, U b) {
-	a %= b;
-	if (a < 0) a += b;
-}
-
 #define FAST_IO ios::sync_with_stdio(0); cin.tie(0); cout.tie(0); cout.precision(20)
 #define dbg(x) cout << (#x) << " is " << (x) << '\n'
 #define dbg2(x, y) cout << (#x) << " is " << (x) << " and " << (#y) << " is " << y << '\n'
