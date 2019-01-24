@@ -6,4 +6,5 @@ To anyone reading this, hello! These are my USACO materials. It contains Data St
 and solutions to old Platinum level problems.
 
 ## USACO Scores
-# 2018-2019
+- 2018-2019
+
