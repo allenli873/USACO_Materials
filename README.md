@@ -6,7 +6,7 @@ To anyone reading this, hello! These are my USACO materials. It contains Data St
 and solutions to old Platinum level problems.
 
 ## USACO Scores
-### 2018-2019:
+### 2018-2019: (Avg Score: 293)
 - Dec (Plat): 182 (64/129)
 - Jan (Plat): 404 (22/135)
 ### 2017-2018:
