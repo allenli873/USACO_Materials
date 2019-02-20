@@ -69,7 +69,6 @@ ll exp(int b, int e) {
 	return t*t%MOD;
 }
 ll solve(ll v, ll len) {
-	if(v == -2) return 1;
 	ll x = 1e9-v;
 	memset(dp, 0, sizeof dp);
 	dp[0] = 0;
@@ -110,21 +109,19 @@ int main() {
 			tv.pb(arr[i]);
 		}
 		if(arr[i] > arr[i+1]) {
-			train[i + k] = arr[i + 1];
+			train[i + k] = arr[i];
 			tv.pb(arr[i]);
 		}
 	}
-	int cN = -2, cL = 0;
+	int cL = 0;
 	ll ans = 1;
 	F0R(i, n) {
 		if(train[i] != -1) {
 			ans *= solve(tv[tvI++], cL);
 			ans %= MOD;
-			cN = -2;
 			cL = 0;
 			continue;
 		}
-		cN = arr[max(0LL, i-k-1)];
 		cL++;
 	}
 	if(cL) {
