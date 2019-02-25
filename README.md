@@ -9,6 +9,7 @@ and solutions to old Platinum level problems.
 ### 2018-2019:
 - Dec (Plat): 182
 - Jan (Plat): 404
+- Feb (Plat): ripripripriprip
 ### 2017-2018:
 - Dec (Gold): 400
 - Jan (Gold): 348
