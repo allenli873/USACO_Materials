@@ -11,7 +11,7 @@ public class RankCheck {
 		String str = in.nextLine();
 //		System.out.println("Enter in graduation year");
 //		String str2 = in.nextLine();
-		for(int year = 18; year >= 16; year--) {
+		for(int year = 19; year >= 16; year--) {
 			for(int j = 0; j < 4; j++) {
 				int a = j != 3 ? year : year - 1;
 				for(int k = 2; k >= 0; k--) {
