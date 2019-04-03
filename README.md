@@ -10,6 +10,7 @@ and solutions to old Platinum level problems.
 - Dec (Plat): 182
 - Jan (Plat): 404
 - Feb (Plat): ripripripriprip
+- Open (Plat): 371
 ### 2017-2018:
 - Dec (Gold): 400
 - Jan (Gold): 348
