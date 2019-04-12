@@ -6,11 +6,11 @@ To anyone reading this, hello! These are my USACO materials. It contains Data St
 and solutions to old Platinum level problems.
 
 ## USACO Scores
-### 2018-2019:
-- Dec (Plat): 182
-- Jan (Plat): 404
-- Feb (Plat): 89
-- Open (Plat): 371
+### 2018-2019 (With Pre-college Ranking):
+- Dec (Plat): 182 (Rank 154/458)
+- Jan (Plat): 404 (Rank 65/525)
+- Feb (Plat): 89 (Rank 279/451)
+- Open (Plat): 371 (Rank 67/410)
 ### 2017-2018:
 - Dec (Gold): 400
 - Jan (Gold): 348
