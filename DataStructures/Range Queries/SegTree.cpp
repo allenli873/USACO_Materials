@@ -6,7 +6,7 @@ public:
 
     SegTree(int sz) {
         SZ = sz;
-        seg.resize(SZ * 4);
+        seg.resize(SZ * 4, 0);
     }
 
     SegTree(int sz, T arr[]) {
@@ -49,8 +49,8 @@ private:
             return seg[node];
         }
         int mid = (l + r) / 2;
-        int n1 = query(a, b, node * 2, l, mid);
-        int n2 = query(a, b, node * 2 + 1, mid + 1, r);
+        T n1 = query(a, b, node * 2, l, mid);
+        T n2 = query(a, b, node * 2 + 1, mid + 1, r);
         if (n1 == NINF)
             return n2;
         if (n2 == NINF)
@@ -62,7 +62,7 @@ private:
         if (idx < l || idx > r)
             return;
         if(l == r) {
-            seg[node] = newVal;
+            seg[node] += newVal;
             return;
         }
         int mid = (l + r) / 2;
