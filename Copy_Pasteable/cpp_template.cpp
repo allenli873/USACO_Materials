@@ -37,10 +37,10 @@ inline bool INR(T i, U l, U r) { return l <= i && i <= r; }
 #define dbgarr2(x, rose, colin) for(int asdf2 = 0; asdf2 < rose; asdf2++) { dbgarr(x[asdf2], colin); }
 #define dbgitem(x) for(auto asdf = x.begin(); asdf != x.end(); asdf++) cout << *asdf << ' '; cout << '\n'
 
+template <typename T, typename U> ostream& operator<<(ostream& os, const pair<T, U> &p){os << '{' << p.first << ',' << p.second << '}'; return os;}
 template <typename T> ostream& operator<<(ostream& os, const vector<T> &p){os << "["; for(int i = 0; i < p.size(); i++) os << p[i] << (i == p.size() - 1 ? "" : ",") ; os << "]"; return os;}
 template <typename T> ostream& operator<<(ostream& os, const set<T> &p){os << "{ "; for (T x: p) os << x << " "; os << "}"; return os;}
 template <typename T> ostream& operator<<(ostream& os, const multiset<T> &p){os << "{ "; for (T x: p) os << x << " "; os << "}"; return os;}
-template <typename T, typename U> ostream& operator<<(ostream& os, const pair<T, U> &p){os << '{' << p.first << ',' << p.second << '}'; return os;}
 
 // WACKY FOR LOOPS
 #define F0R(i, a) for(int (i)=0;(i)<(a);++(i))
