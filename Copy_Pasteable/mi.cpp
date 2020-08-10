@@ -13,11 +13,11 @@ struct mi {
     friend bool operator>=(const mi& a, const mi& b) {return a > b || a == b; }
     mi operator-() const { return mi(-v); }
     mi& operator+=(const mi& m) {
-        if((v += m.v >= MOD)) v -= MOD;
+        if((v += m.v) >= MOD) v -= MOD;
         return *this;
     }
     mi& operator-=(const mi& m) {
-        if(v -= m.v < 0) v += MOD;
+        if((v -= m.v) < 0) v += MOD;
         return *this;
     }
     mi& operator*=(const mi& m) {
