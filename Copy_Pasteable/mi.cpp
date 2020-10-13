@@ -6,11 +6,11 @@ struct mi {
         if(v < 0) v += MOD;
     }
     friend bool operator==(const mi& a, const mi& b) { return a.v == b.v; }
-    friend bool operator!=(const mi& a, const mi& b) { return !(a == b); }
+    friend bool operator!=(const mi& a, const mi& b) { return !(a.v == b.v); }
     friend bool operator<(const mi& a, const mi& b) { return a.v < b.v; }
-    friend bool operator<=(const mi& a, const mi& b) { return a < b || a == b; }
+    friend bool operator<=(const mi& a, const mi& b) { return a.v < b.v || a.v == b.v; }
     friend bool operator>(const mi& a, const mi& b) { return a.v > b.v; }
-    friend bool operator>=(const mi& a, const mi& b) {return a > b || a == b; }
+    friend bool operator>=(const mi& a, const mi& b) {return a.v > b.v || a.v == b.v; }
     mi operator-() const { return mi(-v); }
     mi& operator+=(const mi& m) {
         if((v += m.v) >= MOD) v -= MOD;
@@ -33,13 +33,13 @@ struct mi {
     friend mi operator-(mi a, const mi& b) { return a -= b; }
     friend mi operator*(mi a, const mi& b) { return a *= b; }
     friend mi operator/(mi a, const mi& b) { return a /= b; }
-    friend mi pow(mi b, ll p) {
+    mi pow(mi b, ll p) {
         assert(p >= 0);
         mi ret = 1; 
         for(; p; p /= 2, b *= b) if(p & 1) ret *= b;
         return ret;
     }
-    friend mi inv(const mi& a) {
+    mi inv(const mi& a) {
         assert(a.v != 0);
         return pow(a, MOD - 2);
     }
