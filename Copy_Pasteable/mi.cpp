@@ -49,7 +49,7 @@ struct mi {
     }
     friend istream& operator>>(istream& is, mi& m) {
         ll x; is >> x;
-        m.v = x;
+        m.v = ((x % MOD) + MOD) % MOD;
         return is;
     }
 };
