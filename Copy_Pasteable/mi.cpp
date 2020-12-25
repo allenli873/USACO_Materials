@@ -11,6 +11,7 @@ struct mi {
     friend bool operator<=(const mi& a, const mi& b) { return a.v < b.v || a.v == b.v; }
     friend bool operator>(const mi& a, const mi& b) { return a.v > b.v; }
     friend bool operator>=(const mi& a, const mi& b) {return a.v > b.v || a.v == b.v; }
+    
     mi operator-() const { return mi(-v); }
     mi& operator+=(const mi& m) {
         if((v += m.v) >= MOD) v -= MOD;
@@ -33,15 +34,16 @@ struct mi {
     friend mi operator-(mi a, const mi& b) { return a -= b; }
     friend mi operator*(mi a, const mi& b) { return a *= b; }
     friend mi operator/(mi a, const mi& b) { return a /= b; }
-    mi pow(mi b, ll p) {
+    
+    static mi pow(mi b, ll p) {
         assert(p >= 0);
         mi ret = 1; 
         for(; p; p /= 2, b *= b) if(p & 1) ret *= b;
         return ret;
     }
-    mi inv(const mi& a) {
+    static mi inv(const mi& a) {
         assert(a.v != 0);
-        return pow(a, MOD - 2);
+        return pow(a, (MOD - 2));
     }
     // printing
     friend ostream& operator<<(ostream& os, const mi& m) {
